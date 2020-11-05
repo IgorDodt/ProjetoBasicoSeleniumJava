@@ -1,0 +1,25 @@
+[master ac9d83c] 'trab-
+ Committer: IGOR C DODT <730548469@adm.unifor.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 14 files changed, 51 insertions(+), 39 deletions(-)
+ create mode 100644 src/main/java/br/ce/igordodt/pages/ContasPage.java
+ create mode 100644 src/main/java/br/ce/igordodt/pages/MenuPage.java
+ create mode 100644 target/.gitignore
+ create mode 100644 target/classes/.gitignore
+ delete mode 100644 target/classes/META-INF/MANIFEST.MF
+ delete mode 100644 target/classes/META-INF/maven/br.ce.igordodt/ProjetoBasico/pom.properties
+ delete mode 100644 target/classes/META-INF/maven/br.ce.igordodt/ProjetoBasico/pom.xml
+ rewrite target/classes/br/ce/igordodt/test/ContaTest.class (100%)
+ rewrite target/screenshot/test.jpg (89%)
+ create mode 100644 target/screenshot/testeInserirConta.jpg
