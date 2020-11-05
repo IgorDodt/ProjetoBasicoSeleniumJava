@@ -1,7 +1,5 @@
 package br.ce.igordodt.pages;
 
-import org.openqa.selenium.By;
-
 import br.ce.igordodt.core.BasePage;
 import br.ce.igordodt.core.DriverFactory;
 
@@ -20,7 +18,7 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void clicarBotaoEntrar() {
-		clicarBotao(By.xpath("//button[.='Entrar']"));
+		clicarBotaoPorTexto("Entrar");
 	}
 	
 	public void logar(String email, String senha) {
