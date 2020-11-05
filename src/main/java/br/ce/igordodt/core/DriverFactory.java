@@ -18,7 +18,7 @@ public class DriverFactory {
 
 			switch (Properties.browser) {
 			case FIREFOX: driver = new FirefoxDriver();	break;
-			case CHROME:System.setProperty("webdriver.chrome.driver", dirCasa);
+			case CHROME:System.setProperty("webdriver.chrome.driver", dirTrab);
 				driver = new ChromeDriver();
 				break;
 			}
