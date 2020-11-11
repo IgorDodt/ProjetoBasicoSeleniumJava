@@ -8,26 +8,14 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import br.ce.igordodt.pages.LoginPage;
-
-public class BaseTest {
-	public LoginPage page = new LoginPage();
-	
+public class BaseTest {	
 	@Rule
 	public TestName testName = new TestName();
-	
-	@Before
-	public void inicializa(){
-		page.acessarTelaInicial();
-		
-		page.logar("igorcdodt@gmail.com", "Igor1996@nina");
-	}
 	
 	@After
 	public void finaliza() throws IOException{

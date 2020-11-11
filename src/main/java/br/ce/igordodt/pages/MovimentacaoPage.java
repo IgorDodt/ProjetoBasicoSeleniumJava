@@ -37,7 +37,7 @@ public class MovimentacaoPage extends BasePage{
 		selecionarCombo("conta", conta);
 	}
 	
-	public void setStatusPAgo() {
+	public void setStatusPago() {
 		clicarRadio("status_pago");
 	}
 	

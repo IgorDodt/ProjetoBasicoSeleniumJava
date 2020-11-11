@@ -1,0 +1,15 @@
+[master 5386f27] 'casa-
+ 25 files changed, 185 insertions(+), 12 deletions(-)
+ create mode 100644 src/main/java/br/ce/igordodt/pages/MovimentacaoPage.java
+ create mode 100644 src/main/java/br/ce/igordodt/test/MovimentacaoTest.java
+ delete mode 100644 target/classes/.gitignore
+ create mode 100644 target/classes/META-INF/MANIFEST.MF
+ create mode 100644 target/classes/META-INF/maven/br.ce.igordodt/ProjetoBasico/pom.properties
+ create mode 100644 target/classes/META-INF/maven/br.ce.igordodt/ProjetoBasico/pom.xml
+ create mode 100644 target/classes/br/ce/igordodt/pages/ContasPage.class
+ create mode 100644 target/classes/br/ce/igordodt/pages/MenuPage.class
+ create mode 100644 target/classes/br/ce/igordodt/pages/MovimentacaoPage.class
+ create mode 100644 target/classes/br/ce/igordodt/test/MovimentacaoTest.class
+ create mode 100644 target/screenshot/testeAlterarConta.jpg
+ rewrite target/screenshot/testeInserirConta.jpg (90%)
+ create mode 100644 target/screenshot/testeInserirContaRepetida.jpg

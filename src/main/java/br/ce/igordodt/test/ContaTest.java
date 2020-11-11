@@ -1,21 +1,25 @@
 package br.ce.igordodt.test;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import br.ce.igordodt.core.BaseTest;
+import br.ce.igordodt.core.Properties;
 import br.ce.igordodt.pages.ContasPage;
 import br.ce.igordodt.pages.MenuPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();
 	ContasPage contasPage = new ContasPage();
 	
 	@Test
-	public void testeInserirConta(){
+	public void test1_InserirConta(){
 		menuPage.acessarTelaInserirConta();
-		contasPage.setNome("Conta do Igor");
+		contasPage.setNome("Conta do Igor Dodt");
 		contasPage.salvar();
 		
 		
@@ -23,32 +27,23 @@ public class ContaTest extends BaseTest {
 	}
 	
 	@Test
-	public void testeAlterarConta() {
+	public void test2_AlterarConta() {
 		menuPage.acessarTelaListarConta();
 		
-		contasPage.clicarAlterarConta("Conta do Igor");
-		contasPage.setNome("Conta do Igor alterada");
+		contasPage.clicarAlterarConta("Conta do Igor Dodt");
+		
+		contasPage.setNome(Properties.NOME_CONTA_ALTERADA);
 		contasPage.salvar();
 		
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
 	}
 	
 	@Test
-	public void testeInserirContaRepetida(){
+	public void test3_InserirContaRepetida(){
 		menuPage.acessarTelaInserirConta();
-		contasPage.setNome("Conta do Igor alterada");
+		contasPage.setNome(Properties.NOME_CONTA_ALTERADA);
 		contasPage.salvar();
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());
 	}
-	
-	@Test
-	public void testeExcluirContaComMovimentação() {
-		menuPage.acessarTelaListarConta();
-		
-		contasPage.clicarExcluirConta("Conta do Igor alterada");
-		
-		Assert.assertEquals("Conta em uso nas movimentações", contasPage.obterMensagemErro());
-	}
-
 }

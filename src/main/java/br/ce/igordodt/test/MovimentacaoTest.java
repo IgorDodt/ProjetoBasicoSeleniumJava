@@ -7,36 +7,40 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import br.ce.igordodt.core.BaseTest;
+import br.ce.igordodt.core.Properties;
 import br.ce.igordodt.pages.MenuPage;
 import br.ce.igordodt.pages.MovimentacaoPage;
 import br.ce.igordodt.utils.DataUtils;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest{
 	
 	MenuPage menuPage = new MenuPage();
 	MovimentacaoPage movPage = new MovimentacaoPage();
 	
 	@Test
-	public void testeInserirMovimentacao() {
+	public void test1_InserirMovimentacao() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
-		movPage.setDataMovimentacao("05/11/2020");
-		movPage.setDataPagamento("06/11/2020");
-		movPage.setDescricao("Movimentacao do Igor");
-		movPage.setInteressado("Interessado qualquer");
-		movPage.setValor("250");
-		movPage.setConta("Conta do Igor alterada");
-		movPage.setStatusPAgo();
+		movPage.setDataMovimentacao("11/11/2020");
+		movPage.setDataPagamento("12/11/2020");
+		movPage.setDescricao("Movimentacao do Igor Dodt");
+		movPage.setInteressado("Interessado qualquer 2");
+		movPage.setValor("3800");
+		movPage.setConta(Properties.NOME_CONTA_ALTERADA);
+		movPage.setStatusPago();
 		movPage.salvar();
 		
 		Assert.assertEquals("Movimentação adicionada com sucesso!", movPage.obterMensagemSucesso());
 	}
 	
 	@Test
-	public void testCamposObrigatorios() {
+	public void test2_CamposObrigatorios() {
 		menuPage.acessarTelaInserirMovimentacao();
 		movPage.salvar();
 		
@@ -54,22 +58,22 @@ public class MovimentacaoTest extends BaseTest{
 	}
 	
 	@Test
-	public void inserirMovimentacaoFutura() {
+	public void test3_inserirMovimentacaoFutura() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
 		Date dataFutura = DataUtils.obterDataComDiferençaDias(5);
 		  	
 		movPage.setDataMovimentacao(obterDataFormatada(new Date()));
 		movPage.setDataPagamento(obterDataFormatada(new Date()));
-		movPage.setDescricao("Movimentacao do Igor");
-		movPage.setInteressado("Interessado qualquer");
-		movPage.setValor("250");
-		movPage.setConta("Conta do Igor alterada");
-		movPage.setStatusPAgo();
+		movPage.setDescricao("Movimentacao do Igor Dodt");
+		movPage.setInteressado("Interessado qualquer 2");
+		movPage.setValor("3800");
+		movPage.setConta(Properties.NOME_CONTA_ALTERADA);
+		movPage.setStatusPago();
 		movPage.salvar();
 		
 		List<String> erros = movPage.obterErros();
-		Assert.assertTrue(erros.contains("Data de Movimentação deve ser menor ou igual à data atual"));
+		Assert.assertTrue(erros.contains("Data da Movimentação deve ser menor ou igual à data atual"));
 		
 		Assert.assertEquals(1,erros.size());
 	}
