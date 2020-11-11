@@ -13,6 +13,7 @@ public class ContasPage extends BasePage {
 	
 	public void salvar() {
 		clicarBotaoPorTexto("Salvar");
+		
 	}
 	
 	public String obterMensagemSucesso() {
