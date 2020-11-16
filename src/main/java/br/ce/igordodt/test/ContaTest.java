@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import br.ce.igordodt.core.BaseTest;
-import br.ce.igordodt.core.Properties;
 import br.ce.igordodt.pages.ContasPage;
 import br.ce.igordodt.pages.MenuPage;
 
@@ -30,9 +29,9 @@ public class ContaTest extends BaseTest {
 	public void test2_AlterarConta() {
 		menuPage.acessarTelaListarConta();
 		
-		contasPage.clicarAlterarConta("Conta do Igor Dodt");
+		contasPage.clicarAlterarConta("Conta para alterar");
 		
-		contasPage.setNome(Properties.NOME_CONTA_ALTERADA);
+		contasPage.setNome("Conta alterada");
 		contasPage.salvar();
 		
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
@@ -41,7 +40,7 @@ public class ContaTest extends BaseTest {
 	@Test
 	public void test3_InserirContaRepetida(){
 		menuPage.acessarTelaInserirConta();
-		contasPage.setNome(Properties.NOME_CONTA_ALTERADA);
+		contasPage.setNome("Conta mesmo nome");
 		contasPage.salvar();
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());

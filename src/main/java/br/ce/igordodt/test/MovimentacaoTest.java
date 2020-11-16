@@ -12,7 +12,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import br.ce.igordodt.core.BaseTest;
-import br.ce.igordodt.core.Properties;
 import br.ce.igordodt.pages.MenuPage;
 import br.ce.igordodt.pages.MovimentacaoPage;
 import br.ce.igordodt.utils.DataUtils;
@@ -31,8 +30,8 @@ public class MovimentacaoTest extends BaseTest{
 		movPage.setDataPagamento("12/11/2020");
 		movPage.setDescricao("Movimentacao do Igor Dodt");
 		movPage.setInteressado("Interessado qualquer 2");
-		movPage.setValor("3800");
-		movPage.setConta(Properties.NOME_CONTA_ALTERADA);
+		movPage.setValor("500");
+		movPage.setConta("Conta para movimentacoes");
 		movPage.setStatusPago();
 		movPage.salvar();
 		
@@ -68,7 +67,7 @@ public class MovimentacaoTest extends BaseTest{
 		movPage.setDescricao("Movimentacao do Igor Dodt");
 		movPage.setInteressado("Interessado qualquer 2");
 		movPage.setValor("3800");
-		movPage.setConta(Properties.NOME_CONTA_ALTERADA);
+		movPage.setConta("Conta  para movimentacoes");
 		movPage.setStatusPago();
 		movPage.salvar();
 		

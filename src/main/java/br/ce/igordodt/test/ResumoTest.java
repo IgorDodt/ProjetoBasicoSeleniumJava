@@ -37,6 +37,9 @@ public class ResumoTest extends BaseTest {
 		
 		Assert.assertEquals("Seu Barriga - Extrato", getDriver().getTitle());
 		
+		resuPage.selecionarAno("2016");
+		resuPage.buscar();
+		
 		List<WebElement> elementosEncontrados =  DriverFactory.getDriver().findElements(By.xpath("//*[id='tabelaExtrato']/tbody/tr"));
 		
 		Assert.assertEquals(0,elementosEncontrados.size());

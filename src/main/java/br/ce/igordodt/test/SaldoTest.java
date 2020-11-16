@@ -1,4 +1,4 @@
-package br.ce.igordodt.test;
+	package br.ce.igordodt.test;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class SaldoTest extends BaseTest {
 	public void testeSaldoConta() {
 		menu.acessarTelaPrincipal();
 		
-		Assert.assertEquals("7600", homePage.obterSaldoConta(Properties.NOME_CONTA_ALTERADA));
+		Assert.assertEquals("534.00", homePage.obterSaldoConta("Conta para saldo"));
 		
 	}
 }
