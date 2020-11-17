@@ -26,5 +26,9 @@ public class LoginPage extends BasePage {
 		setSenha(senha);
 		clicarBotaoEntrar();
 	}
+	
+	public void resetar() {
+		clicarLink("reset");
+	}
 
 }

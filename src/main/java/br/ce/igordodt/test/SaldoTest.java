@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import br.ce.igordodt.core.BaseTest;
-import br.ce.igordodt.core.Properties;
 import br.ce.igordodt.pages.HomePage;
 import br.ce.igordodt.pages.MenuPage;
 

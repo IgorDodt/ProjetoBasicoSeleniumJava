@@ -16,7 +16,6 @@ import br.ce.igordodt.pages.MenuPage;
 import br.ce.igordodt.pages.MovimentacaoPage;
 import br.ce.igordodt.utils.DataUtils;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest{
 	
 	MenuPage menuPage = new MenuPage();

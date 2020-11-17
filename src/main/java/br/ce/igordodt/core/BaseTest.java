@@ -24,9 +24,8 @@ public class BaseTest {
 	
 	@Before
 	public void inicializa(){
-		page.acessarTelaInicial();
-		
-		page.logar("igorcdodt@gmail.com", "Igor1996@nina");
+		page.acessarTelaInicial();	
+		page.logar("", "");
 	}
 	
 	@After

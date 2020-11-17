@@ -9,7 +9,6 @@ import br.ce.igordodt.core.BaseTest;
 import br.ce.igordodt.pages.ContasPage;
 import br.ce.igordodt.pages.MenuPage;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();

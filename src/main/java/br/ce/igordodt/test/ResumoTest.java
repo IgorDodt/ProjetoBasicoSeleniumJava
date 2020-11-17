@@ -16,7 +16,6 @@ import br.ce.igordodt.core.DriverFactory;
 import br.ce.igordodt.pages.MenuPage;
 import br.ce.igordodt.pages.ResumoPage;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ResumoTest extends BaseTest {
 	
 	private MenuPage menuPage = new MenuPage();
